@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+    color: #fff;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/high-angle-shot-beautiful-cityscape-sunset-new-york-city-usa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.navbar {
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 13%;
+    border-bottom: 2px solid #fff;
+}
+h1 {
+    font-size: 2.8em;
+}
+h1::first-letter {
+    color: rgb(241, 206, 5);
+}
+
+.navlist a {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin: 0 1em;
+    position: relative;
+}
+.navlist a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+.navlist a:hover::after {
+    width: 100%;
+    transition: all .3s ease;
+}
+.mid {
+    height: 100vh;
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+    padding: 0 20%;
+}
+.text h2 {
+    font-size: 5em;
+}
+.text p {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+.text a {
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-size: 1.3em;
+    padding: 10px 2em;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.text a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.text a:hover::after {
+    width: 100%;
+}
+
+.text a:hover {
+    color: black;
+    transition: color .3s ease;
+}
+
+@media (max-width: 1200px) {
+    .text p {
+        font-size: 1.1em;
+    }
+    .text h2 {
+        font-size: 4.5em;
+    }
+}

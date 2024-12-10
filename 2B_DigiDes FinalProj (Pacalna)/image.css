@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+    color: #fff;
+}
+.navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 13%;
+    border-bottom: 2px solid #fff;
+}
+h1 {
+    font-size: 2.8em;
+}
+h1::first-letter {
+    color: rgb(241, 206, 5);
+}
+
+.navlist a {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin: 0 1em;
+    position: relative;
+}
+.navlist a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+.navlist a:hover::after {
+    width: 100%;
+    transition: all .3s ease;
+}
+
+img {
+    width: 100%;
+    height: 350px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: block;
+}
+.image {
+    width: 300px;
+    position: relative;
+    border-radius: 10px;
+}
+.image-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.image-text:hover{
+    opacity: 1;
+}
+.image-text > *{
+    transform: translateX(40px);
+    transition: transform .8s ease;
+}
+.image-text:hover > *{
+    transform: translateX(0);
+} 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1%;
+    gap: 10px;
+}
+h2 {
+    font-family: monospace;
+    font-size: 2.3em;
+}

@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 13%;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    color: #fff;
+    background-color: black;
+}
+h1 {
+    font-size: 2.8em;
+}
+h1::first-letter {
+    color: rgb(241, 206, 5);
+}
+
+.navlist a {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin: 0 1em;
+    position: relative;
+    color: #fff;
+}
+.navlist a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+.navlist a:hover::after {
+    width: 100%;
+    transition: all .3s ease;
+}
+
+.team-section {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.945);
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    margin: 10px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px; 
+    padding: 20px;
+}
+.social {
+    text-align: left;
+}
+.team-member {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.719);
+    padding: 10px;
+    min-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.911);
+}
+.team-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-member h2 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+#me {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+}
+.background-line {
+    background-color: rgb(224, 193, 13);
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+}
+
+
+@media (max-width: 1200px) {
+    .team-member {
+        min-width: 350px;
+    }
+    .team-photo {
+        width: 130px;
+        height: 130px;
+    }
+    .team-section {
+        max-width: 900px;
+    }
+    .team-container {
+        gap: 20px;
+    }
+}
+@media (min-width: 1200px) {
+    .team-member {
+        min-width: 350px;
+    }
+    .team-photo {
+        width: 130px;
+        height: 130px;
+    }
+    .team-section {
+        max-width: 900px;
+    }
+    .team-container {
+        gap: 20px;
+    }
+}
